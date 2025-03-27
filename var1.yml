@@ -1,0 +1,8 @@
+- name: working on variable
+  hosts: all
+  vars:
+    dasa: "www.google.com"
+  tasks:
+    - name: task1
+      ansible.builtin.debug:
+        msg: The url is "{{dasa}}"
