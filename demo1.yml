@@ -1,0 +1,8 @@
+- name: creating a user
+  hosts: all
+  tasks:
+    - name: task1
+      ansible.builtin.user:
+        name: joy
+        group: Delta
+        state: present
