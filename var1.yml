@@ -5,4 +5,4 @@
   tasks:
     - name: task1
       ansible.builtin.debug:
-        msg: The url is "{{dasa}}"
+        msg: The url is {{dasa}}
