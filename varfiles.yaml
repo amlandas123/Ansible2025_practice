@@ -1,0 +1,8 @@
+- name: demo on varfiles
+  hosts: all
+  vars_files:
+    - "{{ENV}}.yml"
+  tasks:
+    - name: task1
+      ansible.builtin.debug:
+        msg: Type of Instance and disksize used for {{ENV}} is {{inst_type}} and {{disk_size}}
