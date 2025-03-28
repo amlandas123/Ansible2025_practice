@@ -23,3 +23,13 @@
         msg: action is undefined
       when: action is undefined
 
+    - name: task3
+      ansible.builtin.debug:
+        msg: action is defined
+      when: action is unfined
+
+    - name: task4
+      ansible.builtin.debug:
+        msg: action is undefined
+      when: action is defined
+
