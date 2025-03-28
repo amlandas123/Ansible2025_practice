@@ -12,4 +12,4 @@
         msg: Hello all, the url is {{dasa}}
 
       vars:
-        - dasa: task2.jiraffe.com
+        dasa: task2.jiraffe.com
