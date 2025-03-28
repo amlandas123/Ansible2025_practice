@@ -3,4 +3,4 @@
   tasks:
     - name: gather ip address
       ansible.builtin.debug:
-        msg: The IP address is "[ansible_default_ipv4][address]"
+        msg: The IP address is "[ansible_facts][ansible_default_ipv4][address]"
