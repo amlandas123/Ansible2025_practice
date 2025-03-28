@@ -1,0 +1,12 @@
+- name: working on condition
+  hosts: dev
+  tasks:
+    - name: task1
+      ansible.builtin.debug:
+        msg: The os distribution is {{ansible_distribution}}
+      when: ansible_distribution == "RedHat"
+
+    - name: task1
+      ansible.builtin.debug:
+        msg: The os distribution is {{ansible_distribution}}
+      when: ansible_distribution == "CentOS"
