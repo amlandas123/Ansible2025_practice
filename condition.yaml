@@ -1,5 +1,7 @@
 - name: working on condition
   hosts: dev
+  vars:
+    action: false
   tasks:
     - name: task1
       ansible.builtin.debug:
@@ -10,3 +12,14 @@
       ansible.builtin.debug:
         msg: The os distribution is {{ansible_distribution}}
       when: ansible_distribution == "CentOS"
+
+    - name: task3
+      ansible.builtin.debug:
+        msg: action is defined
+      when: action is defined
+
+    - name: task4
+      ansible.builtin.debug:
+        msg: action is undefined
+      when: action is undefined
+
