@@ -6,3 +6,10 @@
     - name: task1
       ansible.builtin.debug:
         msg: The url is {{dasa}}
+
+    - name: task2
+      ansible.builtin.debug:
+        msg: Hello all, the url is {{dasa}}
+
+      vars:
+        - dasa: task2.jiraffe.com
