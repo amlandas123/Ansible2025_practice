@@ -8,3 +8,11 @@
     - name: Display the shell output
       ansible.builtin.debug:
         msg: The uptime is {{output.stdout}}
+
+    - name: capturing exit code using set fact
+      set_fact:
+          Exitcode: {{output.rc}}
+
+    - name: Display the exit code
+      ansible.builtin.debug:
+        msg: The exitcode is {{Exitcode}}
