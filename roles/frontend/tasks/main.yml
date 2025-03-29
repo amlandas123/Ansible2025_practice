@@ -1,0 +1,14 @@
+- name: Installing httpd and firewalld
+  ansible.builtin.package:
+    name: "{{package}}"
+    state: absent
+
+- name: Starting the service
+  ansible.builtin.service:
+    name: "{{package}}"
+    state: absent
+
+- name: Enabling the service
+  ansible.builtin.service:
+    name: "{{package}}"
+    enabled: false

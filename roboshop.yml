@@ -1,0 +1,4 @@
+- name: configuring roles
+  hosts: webservers
+  roles:
+    - role: frontend
