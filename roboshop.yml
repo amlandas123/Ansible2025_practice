@@ -1,4 +1,5 @@
 - name: configuring roles
-  hosts: webservers
+  hosts: frontend
+  become: true
   roles:
     - role: frontend
