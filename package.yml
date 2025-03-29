@@ -1,0 +1,26 @@
+- name: creating package
+  hosts: dev
+  tasks:
+    - name: Installing httpd and firewalld
+      ansible.builtin.package:
+        name: {{item}}
+        state: present
+      loop:
+        - httpd
+        - firewalld
+
+    - name: Start service httpd
+      ansible.builtin.service:
+        name: {{item}}
+        state: started
+      loop:
+        - httpd
+        - firewalld
+
+    - name: Enable service httpd, and not touch the state
+      ansible.builtin.service:
+        name: {{item}}
+        enabled: yes
+      loop:
+        - httpd
+        - firewalld
